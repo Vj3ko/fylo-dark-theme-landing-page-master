@@ -3,9 +3,8 @@
 This is a solution to the [Fylo dark theme landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 ### Links
 
-- Solution URL: 
-- Live Site URL: 
-- Github URL: 
+- Solution URL: https://www.frontendmentor.io/solutions/mobile-first-approach-with-scss-BY0XqFDQ8
+- Live Site URL: https://fylo-dark-theme-landing-page-master-six-phi.vercel.app/
 
 ### Built with
 
