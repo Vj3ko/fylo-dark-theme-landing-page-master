@@ -589,6 +589,7 @@ header .header__navbar .navbar_link:hover, header .header__navbar .navbar_link:f
     margin-top: 0;
     -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
+    font-size: 1.2rem;
   }
 }
 
