@@ -1,0 +1,392 @@
+.main {
+      position: relative;
+      padding-bottom: 20rem;
+
+      &__hero {
+            background: url(../images/bg-curvy-mobile.svg), $--clr-Blue-1;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: contain;
+            padding-bottom: 13rem;
+
+            @include responsive("laptop") {
+                  background: url(../images/bg-curvy-desktop.svg), $--clr-Blue-1;
+                  background-repeat: no-repeat;
+                  background-position: bottom;
+                  background-size: contain;
+            }
+
+            .hero__container {
+                  display: flex;
+                  flex-direction: column;
+                  text-align: center;
+                  position: relative;
+                  width: 90%;
+                  max-width: 75rem;
+                  margin: auto;
+
+                  img {
+                        width: 100%;
+                        margin: 4.5rem 0;
+                  }
+
+                  .hero_header {
+                        font-size: 2.4rem;
+                        line-height: 1.5;
+                        color: $--clr-White;
+
+                        @include responsive("phone") {
+                              max-width: 45rem;
+                              margin: auto;
+                        }
+
+                        @include responsive("laptop") {
+                              font-size: 3.4rem;
+                              max-width: 70rem;
+                        }
+                  }
+
+                  .hero_info {
+                        margin: 3rem 0;
+
+                        @include responsive("phone") {
+                              padding: 0 3rem;
+                              max-width: 45rem;
+                              margin: 3rem auto;
+                        }
+
+                        @include responsive("laptop") {
+                              font-size: 1.6rem;
+                              padding: 0 9rem;
+                              max-width: 70rem;
+                        }
+                  }
+
+                  .hero_button {
+                        font-size: 1.5rem;
+                        font-weight: bolder;
+                        color: $--clr-White;
+                        padding: 1.5rem 8rem;
+                        width: 80%;
+                        margin: auto;
+                        background: linear-gradient(
+                              to right,
+                              $--clr-Cyan,
+                              $--clr-Blue
+                        );
+                        border-radius: 5rem;
+
+                        @include responsive("phone") {
+                              max-width: 28rem;
+                        }
+
+                        &:hover,
+                        &:focus {
+                              background: $--clr-Cyan;
+                        }
+                  }
+            }
+      }
+
+      &__grid {
+            margin: 0 auto 13rem auto;
+            width: 90%;
+            max-width: 128rem;
+            display: grid;
+            text-align: center;
+            grid-template-columns: 1fr;
+            gap: 9rem;
+
+            @include responsive("tablet") {
+                  grid-template-columns: 1fr 1fr;
+                  gap: 5rem;
+            }
+
+            .grid_item {
+                  max-width: 38.5rem;
+                  margin: auto;
+                  outline: none;
+                  cursor: pointer;
+                  transition: box-shadow 250ms ease-in-out;
+
+                  @include responsive("tablet") {
+                        padding: 2rem;
+                  }
+
+                  &:hover,
+                  &:focus {
+                        box-shadow: 0.2rem 0.2rem 2rem rgba($--clr-White, 0.2);
+                  }
+
+                  img {
+                        width: auto;
+                        height: 8.5rem;
+                  }
+
+                  .item-title {
+                        font-size: 1.8rem;
+                        color: $--clr-White;
+                        margin: 3.6rem 0 2rem 0;
+                  }
+            }
+      }
+
+      &__productive {
+            margin: 13rem auto;
+            width: 90%;
+            max-width: 128rem;
+
+            @include responsive("laptop") {
+                  display: flex;
+            }
+
+            .productive__img {
+                  max-width: 61.5rem;
+                  flex-basis: 50%;
+                  margin: auto;
+
+                  img {
+                        width: 100%;
+                  }
+            }
+
+            .productive_wrapper {
+                  @include responsive("phone") {
+                        max-width: 45rem;
+                        margin: auto;
+                        flex-basis: 50%;
+                  }
+
+                  h2 {
+                        font-size: 1.8rem;
+                        color: $--clr-White;
+                        text-align: center;
+                        margin: 5rem 0 3rem 0;
+
+                        @include responsive("laptop") {
+                              font-size: 3.8rem;
+                              text-align: left;
+                        }
+                  }
+
+                  p {
+                        margin-bottom: 2.5rem;
+                  }
+
+                  .productive-btn {
+                        color: $--clr-Cyan;
+                        padding-bottom: 0.2rem;
+                        padding-right: 0.9rem;
+                        border-bottom: 0.1rem solid $--clr-Cyan;
+                        transition: all 300ms linear;
+
+                        &::after {
+                              content: url(../images/icon-arrow.svg);
+                              display: inline-block;
+                              position: relative;
+                              top: 0.3rem;
+                              left: 1rem;
+                        }
+
+                        &:hover,
+                        &:focus {
+                              color: $--clr-White;
+                              border-bottom: 0.1rem solid $--clr-White;
+                        }
+
+                        &:hover::after,
+                        &:focus::after {
+                              content: url(../images/icon-arrow-white.svg);
+                        }
+                  }
+            }
+      }
+
+      &__testimonials {
+            margin: 13rem auto;
+            width: 80%;
+            max-width: 128rem;
+
+            @include responsive("phone") {
+                  display: flex;
+                  flex-wrap: wrap;
+                  width: 90%;
+                  gap: 3rem;
+            }
+
+            .testimonial {
+                  background: $--clr-Blue-4;
+                  padding: 2.5rem;
+                  max-width: 36rem;
+                  margin: auto;
+                  margin-bottom: 2.5rem;
+                  border-radius: 0.5rem;
+                  box-shadow: 0.2rem 0.2rem 2rem rgba(0, 0, 0, 0.3);
+                  position: relative;
+                  transition: all 300ms ease-in-out;
+
+                  &:hover {
+                        box-shadow: 0.2rem 0.2rem 2rem rgba($--clr-White, 0.2);
+                        cursor: pointer;
+                  }
+
+                  &:first-of-type::before {
+                        content: url(../images/bg-quotes.png);
+                        position: absolute;
+                        top: -3rem;
+                        left: -0.7rem;
+                        transform: scale(0.5);
+                        z-index: -1;
+
+                        @include responsive("laptop") {
+                              transform: scale(1);
+                        }
+                  }
+
+                  .testimonial_info {
+                        font-size: 1rem;
+
+                        @include responsive("phone") {
+                              font-size: 1.5rem;
+                        }
+                  }
+
+                  .testimonial_person {
+                        display: flex;
+                        align-items: center;
+                        margin-top: 2rem;
+
+                        .person-img {
+                              height: 2.5rem;
+                              width: 2.5rem;
+                              border-radius: 50%;
+                              margin-right: 1rem;
+                        }
+
+                        .person_info {
+                              .person-name {
+                                    font-size: 1rem;
+                                    color: $--clr-Grey;
+                                    letter-spacing: 0.1rem;
+
+                                    @include responsive("phone") {
+                                          font-size: 1.2rem;
+                                    }
+                              }
+
+                              .person-job {
+                                    font-size: 0.8rem;
+                                    color: rgba($--clr-White, 0.6);
+                                    letter-spacing: 0.1rem;
+                              }
+                        }
+                  }
+            }
+      }
+
+      &__access {
+            padding: 4.5rem 2.6rem;
+            text-align: center;
+            background: $--clr-Blue-1;
+            border-radius: 0.5rem;
+            position: absolute;
+            bottom: -5%;
+            box-shadow: 0.2rem 0.2rem 2rem rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 86rem;
+            left: 50%;
+            transform: translatex(-50%);
+
+            .access-title {
+                  color: $--clr-White;
+
+                  @include responsive("tablet") {
+                        font-size: 3.2rem;
+                  }
+            }
+
+            .access-info {
+                  margin: 2.5rem auto;
+                  max-width: 62.5rem;
+            }
+
+            .access_form {
+                  display: flex;
+                  flex-direction: column;
+                  max-width: 70rem;
+                  margin: auto;
+                  position: relative;
+
+                  @include responsive("tablet") {
+                        flex-direction: row;
+                        justify-content: space-between;
+                  }
+
+                  .form-input,
+                  .form-btn {
+                        width: 100%;
+                        padding: 1.5rem 0;
+                        border-radius: 5rem;
+                        border: none;
+                  }
+
+                  .form-input {
+                        padding-left: 3rem;
+                        color: rgba(0, 0, 0, 0.5);
+
+                        @include responsive("tablet") {
+                              flex-basis: 65%;
+                        }
+                  }
+
+                  .form-input::placeholder {
+                        font-size: 1rem;
+                        font-weight: bolder;
+                        color: rgba(0, 0, 0, 0.2);
+                  }
+
+                  .hide-error {
+                        opacity: 0;
+                        visibility: hidden;
+                        position: absolute;
+                        bottom: 5.2rem;
+                        left: 3rem;
+                        font-size: 1rem;
+                        color: $--clr-lt-Red;
+
+                        @include responsive("tablet") {
+                              bottom: -2rem;
+                              left: 3rem;
+                        }
+
+                        &.show-error {
+                              opacity: 1;
+                              visibility: visible;
+                        }
+                  }
+
+                  .form-btn {
+                        margin-top: 2.5rem;
+                        font-size: 1.5rem;
+                        font-weight: bolder;
+                        color: $--clr-White;
+                        background: linear-gradient(
+                              to right,
+                              $--clr-Cyan,
+                              $--clr-Blue
+                        );
+                        cursor: pointer;
+
+                        @include responsive("tablet") {
+                              margin-top: 0;
+                              flex-basis: 30%;
+                        }
+
+                        &:hover,
+                        &:focus {
+                              background: $--clr-Cyan;
+                        }
+                  }
+            }
+      }
+}

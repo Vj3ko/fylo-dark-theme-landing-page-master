@@ -1,0 +1,15 @@
+// Primary colors
+$--clr-Blue-1: hsl(217, 28%, 15%);  // intro and emails sign up background
+$--clr-Blue-2: hsl(218, 28%, 13%); // main background
+$--clr-Blue-3: hsl(216, 53%, 9%); // footer background
+$--clr-Blue-4: hsl(219, 30%, 18%); // testimonials background
+
+// Secondary colors
+$--clr-Cyan: hsl(176, 68%, 64%); // inside call-to-action gradient
+$--clr-Blue: hsl(198, 60%, 50%); // inside call-to-action gradient
+$--clr-lt-Red: hsl(0, 100%, 63%); // error
+
+// Neutral color 
+$--clr-White:hsl(0, 0%, 100%);
+$--clr-Grey: rgba($--clr-White, 0.8);
+
